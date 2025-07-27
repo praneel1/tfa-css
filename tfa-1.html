@@ -1,0 +1,74 @@
+<html>
+<head>
+  <style>
+    body {
+      background-color: #120000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, #e09843 100%, #c97b18 100%);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .star {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      transform: translateX(-50%) translateY(-50%) scale(2);
+      width: 0;
+      height: 0;
+    }
+
+    .star::before {
+      content: '★';
+      font-size: 100px;
+      color: #5c3208;
+      display: block;
+      line-height: 1;
+    }
+    
+    .starin {
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      transform: translateX(-50%) scale(0.5);
+      width: 0;
+      height: 0;
+    }
+
+    .starin::before {
+      content: '★';
+      font-size: 100px;
+      color: #e09843;
+      display: block;
+      line-height: 1;
+    }
+
+    .stick {
+      position: absolute;
+      top: 115px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 60px;
+      background-color: #5c3208;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+      <div class="stick"></div>
+    <div class="star">
+        <div class="starin"></div>
+    </div>
+  </div>
+</body>
+</html>
